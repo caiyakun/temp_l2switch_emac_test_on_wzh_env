@@ -1,0 +1,204 @@
+/*
+ * SPDX-FileCopyrightText: 2023 Espressif Systems (Shanghai) CO LTD
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+#ifndef _SWITCH_SWITCH_TBX_MEM_STRUCT_H_
+#define _SWITCH_SWITCH_TBX_MEM_STRUCT_H_
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "switch.h"
+
+typedef volatile struct {
+    uint32_t tbxmem_tx_pattern0_addr0_31to0;
+    uint32_t tbxmem_tx_pattern0_addr0_63to32;
+    uint32_t tbxmem_tx_pattern0_addr1_31to0;
+    uint32_t tbxmem_tx_pattern0_addr1_63to32;
+    uint32_t tbxmem_tx_pattern0_addr2_31to0;
+    uint32_t tbxmem_tx_pattern0_addr2_63to32;
+    uint32_t tbxmem_tx_pattern0_addr3_31to0;
+    uint32_t tbxmem_tx_pattern0_addr3_63to32;
+    uint32_t tbxmem_tx_pattern0_addr4_31to0;
+    uint32_t tbxmem_tx_pattern0_addr4_63to32;
+    uint32_t tbxmem_tx_pattern0_addr5_31to0;
+    uint32_t tbxmem_tx_pattern0_addr5_63to32;
+    uint32_t tbxmem_tx_pattern0_addr6_31to0;
+    uint32_t tbxmem_tx_pattern0_addr6_63to32;
+    uint32_t tbxmem_tx_pattern0_addr7_31to0;
+    uint32_t tbxmem_tx_pattern0_addr7_63to32;
+    uint32_t tbxmem_tx_pattern0_addr8_31to0;
+    uint32_t tbxmem_tx_pattern0_addr8_63to32;
+    uint32_t tbxmem_tx_pattern0_addr9_31to0;
+    uint32_t tbxmem_tx_pattern0_addr9_63to32;
+    uint32_t tbxmem_tx_pattern0_addr10_31to0;
+    uint32_t tbxmem_tx_pattern0_addr10_63to32;
+    uint32_t tbxmem_tx_pattern0_addr11_31to0;
+    uint32_t tbxmem_tx_pattern0_addr11_63to32;
+    uint32_t tbxmem_tx_pattern0_addr12_31to0;
+    uint32_t tbxmem_tx_pattern0_addr12_63to32;
+    uint32_t tbxmem_tx_pattern0_addr13_31to0;
+    uint32_t tbxmem_tx_pattern0_addr13_63to32;
+    uint32_t tbxmem_tx_pattern0_addr14_31to0;
+    uint32_t tbxmem_tx_pattern0_addr14_63to32;
+    uint32_t tbxmem_tx_pattern0_addr15_31to0;
+    uint32_t tbxmem_tx_pattern0_addr15_63to32;
+    uint32_t tbxmem_tx_pattern0_addr16_31to0;
+    uint32_t tbxmem_tx_pattern0_addr16_63to32;
+    uint32_t tbxmem_tx_pattern0_addr17_31to0;
+    uint32_t tbxmem_tx_pattern0_addr17_63to32;
+    uint32_t tbxmem_tx_pattern1_addr0_31to0;
+    uint32_t tbxmem_tx_pattern1_addr0_63to32;
+    uint32_t tbxmem_tx_pattern1_addr1_31to0;
+    uint32_t tbxmem_tx_pattern1_addr1_63to32;
+    uint32_t tbxmem_tx_pattern1_addr2_31to0;
+    uint32_t tbxmem_tx_pattern1_addr2_63to32;
+    uint32_t tbxmem_tx_pattern1_addr3_31to0;
+    uint32_t tbxmem_tx_pattern1_addr3_63to32;
+    uint32_t tbxmem_tx_pattern1_addr4_31to0;
+    uint32_t tbxmem_tx_pattern1_addr4_63to32;
+    uint32_t tbxmem_tx_pattern1_addr5_31to0;
+    uint32_t tbxmem_tx_pattern1_addr5_63to32;
+    uint32_t tbxmem_tx_pattern1_addr6_31to0;
+    uint32_t tbxmem_tx_pattern1_addr6_63to32;
+    uint32_t tbxmem_tx_pattern1_addr7_31to0;
+    uint32_t tbxmem_tx_pattern1_addr7_63to32;
+    uint32_t tbxmem_tx_pattern1_addr8_31to0;
+    uint32_t tbxmem_tx_pattern1_addr8_63to32;
+    uint32_t tbxmem_tx_pattern1_addr9_31to0;
+    uint32_t tbxmem_tx_pattern1_addr9_63to32;
+    uint32_t tbxmem_tx_pattern1_addr10_31to0;
+    uint32_t tbxmem_tx_pattern1_addr10_63to32;
+    uint32_t tbxmem_tx_pattern1_addr11_31to0;
+    uint32_t tbxmem_tx_pattern1_addr11_63to32;
+    uint32_t tbxmem_tx_pattern1_addr12_31to0;
+    uint32_t tbxmem_tx_pattern1_addr12_63to32;
+    uint32_t tbxmem_tx_pattern1_addr13_31to0;
+    uint32_t tbxmem_tx_pattern1_addr13_63to32;
+    uint32_t tbxmem_tx_pattern1_addr14_31to0;
+    uint32_t tbxmem_tx_pattern1_addr14_63to32;
+    uint32_t tbxmem_tx_pattern1_addr15_31to0;
+    uint32_t tbxmem_tx_pattern1_addr15_63to32;
+    uint32_t tbxmem_tx_pattern1_addr16_31to0;
+    uint32_t tbxmem_tx_pattern1_addr16_63to32;
+    uint32_t tbxmem_tx_pattern1_addr17_31to0;
+    uint32_t tbxmem_tx_pattern1_addr17_63to32;
+    uint32_t tbxmem_tx_pattern2_addr0_31to0;
+    uint32_t tbxmem_tx_pattern2_addr0_63to32;
+    uint32_t tbxmem_tx_pattern2_addr1_31to0;
+    uint32_t tbxmem_tx_pattern2_addr1_63to32;
+    uint32_t tbxmem_tx_pattern2_addr2_31to0;
+    uint32_t tbxmem_tx_pattern2_addr2_63to32;
+    uint32_t tbxmem_tx_pattern2_addr3_31to0;
+    uint32_t tbxmem_tx_pattern2_addr3_63to32;
+    uint32_t tbxmem_tx_pattern2_addr4_31to0;
+    uint32_t tbxmem_tx_pattern2_addr4_63to32;
+    uint32_t tbxmem_tx_pattern2_addr5_31to0;
+    uint32_t tbxmem_tx_pattern2_addr5_63to32;
+    uint32_t tbxmem_tx_pattern2_addr6_31to0;
+    uint32_t tbxmem_tx_pattern2_addr6_63to32;
+    uint32_t tbxmem_tx_pattern2_addr7_31to0;
+    uint32_t tbxmem_tx_pattern2_addr7_63to32;
+    uint32_t tbxmem_tx_pattern2_addr8_31to0;
+    uint32_t tbxmem_tx_pattern2_addr8_63to32;
+    uint32_t tbxmem_tx_pattern2_addr9_31to0;
+    uint32_t tbxmem_tx_pattern2_addr9_63to32;
+    uint32_t tbxmem_tx_pattern2_addr10_31to0;
+    uint32_t tbxmem_tx_pattern2_addr10_63to32;
+    uint32_t tbxmem_tx_pattern2_addr11_31to0;
+    uint32_t tbxmem_tx_pattern2_addr11_63to32;
+    uint32_t tbxmem_tx_pattern2_addr12_31to0;
+    uint32_t tbxmem_tx_pattern2_addr12_63to32;
+    uint32_t tbxmem_tx_pattern2_addr13_31to0;
+    uint32_t tbxmem_tx_pattern2_addr13_63to32;
+    uint32_t tbxmem_tx_pattern2_addr14_31to0;
+    uint32_t tbxmem_tx_pattern2_addr14_63to32;
+    uint32_t tbxmem_tx_pattern2_addr15_31to0;
+    uint32_t tbxmem_tx_pattern2_addr15_63to32;
+    uint32_t tbxmem_tx_pattern2_addr16_31to0;
+    uint32_t tbxmem_tx_pattern2_addr16_63to32;
+    uint32_t tbxmem_tx_pattern2_addr17_31to0;
+    uint32_t tbxmem_tx_pattern2_addr17_63to32;
+    uint32_t tbxmem_tx_pattern3_addr0_31to0;
+    uint32_t tbxmem_tx_pattern3_addr0_63to32;
+    uint32_t tbxmem_tx_pattern3_addr1_31to0;
+    uint32_t tbxmem_tx_pattern3_addr1_63to32;
+    uint32_t tbxmem_tx_pattern3_addr2_31to0;
+    uint32_t tbxmem_tx_pattern3_addr2_63to32;
+    uint32_t tbxmem_tx_pattern3_addr3_31to0;
+    uint32_t tbxmem_tx_pattern3_addr3_63to32;
+    uint32_t tbxmem_tx_pattern3_addr4_31to0;
+    uint32_t tbxmem_tx_pattern3_addr4_63to32;
+    uint32_t tbxmem_tx_pattern3_addr5_31to0;
+    uint32_t tbxmem_tx_pattern3_addr5_63to32;
+    uint32_t tbxmem_tx_pattern3_addr6_31to0;
+    uint32_t tbxmem_tx_pattern3_addr6_63to32;
+    uint32_t tbxmem_tx_pattern3_addr7_31to0;
+    uint32_t tbxmem_tx_pattern3_addr7_63to32;
+    uint32_t tbxmem_tx_pattern3_addr8_31to0;
+    uint32_t tbxmem_tx_pattern3_addr8_63to32;
+    uint32_t tbxmem_tx_pattern3_addr9_31to0;
+    uint32_t tbxmem_tx_pattern3_addr9_63to32;
+    uint32_t tbxmem_tx_pattern3_addr10_31to0;
+    uint32_t tbxmem_tx_pattern3_addr10_63to32;
+    uint32_t tbxmem_tx_pattern3_addr11_31to0;
+    uint32_t tbxmem_tx_pattern3_addr11_63to32;
+    uint32_t tbxmem_tx_pattern3_addr12_31to0;
+    uint32_t tbxmem_tx_pattern3_addr12_63to32;
+    uint32_t tbxmem_tx_pattern3_addr13_31to0;
+    uint32_t tbxmem_tx_pattern3_addr13_63to32;
+    uint32_t tbxmem_tx_pattern3_addr14_31to0;
+    uint32_t tbxmem_tx_pattern3_addr14_63to32;
+    uint32_t tbxmem_tx_pattern3_addr15_31to0;
+    uint32_t tbxmem_tx_pattern3_addr15_63to32;
+    uint32_t tbxmem_tx_pattern3_addr16_31to0;
+    uint32_t tbxmem_tx_pattern3_addr16_63to32;
+    uint32_t tbxmem_tx_pattern3_addr17_31to0;
+    uint32_t tbxmem_tx_pattern3_addr17_63to32;
+    uint32_t tbxmem_rx_addr0_31to0;
+    uint32_t tbxmem_rx_addr0_63to32;
+    uint32_t tbxmem_rx_addr1_31to0;
+    uint32_t tbxmem_rx_addr1_63to32;
+    uint32_t tbxmem_rx_addr2_31to0;
+    uint32_t tbxmem_rx_addr2_63to32;
+    uint32_t tbxmem_rx_addr3_31to0;
+    uint32_t tbxmem_rx_addr3_63to32;
+    uint32_t tbxmem_rx_addr4_31to0;
+    uint32_t tbxmem_rx_addr4_63to32;
+    uint32_t tbxmem_rx_addr5_31to0;
+    uint32_t tbxmem_rx_addr5_63to32;
+    uint32_t tbxmem_rx_addr6_31to0;
+    uint32_t tbxmem_rx_addr6_63to32;
+    uint32_t tbxmem_rx_addr7_31to0;
+    uint32_t tbxmem_rx_addr7_63to32;
+    uint32_t tbxmem_rx_addr8_31to0;
+    uint32_t tbxmem_rx_addr8_63to32;
+    uint32_t tbxmem_rx_addr9_31to0;
+    uint32_t tbxmem_rx_addr9_63to32;
+    uint32_t tbxmem_rx_addr10_31to0;
+    uint32_t tbxmem_rx_addr10_63to32;
+    uint32_t tbxmem_rx_addr11_31to0;
+    uint32_t tbxmem_rx_addr11_63to32;
+    uint32_t tbxmem_rx_addr12_31to0;
+    uint32_t tbxmem_rx_addr12_63to32;
+    uint32_t tbxmem_rx_addr13_31to0;
+    uint32_t tbxmem_rx_addr13_63to32;
+    uint32_t tbxmem_rx_addr14_31to0;
+    uint32_t tbxmem_rx_addr14_63to32;
+    uint32_t tbxmem_rx_addr15_31to0;
+    uint32_t tbxmem_rx_addr15_63to32;
+    uint32_t tbxmem_rx_addr16_31to0;
+    uint32_t tbxmem_rx_addr16_63to32;
+    uint32_t tbxmem_rx_addr17_31to0;
+    uint32_t tbxmem_rx_addr17_63to32;
+} switch_tbx_mem_dev_t;
+extern switch_tbx_mem_dev_t SWITCH_TBX_MEM;
+#ifdef __cplusplus
+}
+#endif
+
+
+
+#endif /*_SWITCH_SWITCH_TBX_MEM_STRUCT_H_ */

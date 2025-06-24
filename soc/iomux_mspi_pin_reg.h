@@ -1,0 +1,1061 @@
+/*
+ * SPDX-FileCopyrightText: 2024 Espressif Systems (Shanghai) CO LTD
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+#ifndef _SOC_IOMUX_MSPI_PIN_REG_H_
+#define _SOC_IOMUX_MSPI_PIN_REG_H_
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "soc.h"
+
+#define SPI_CS0_DED_GPIO_NUM 0 // dedicated CS0 pin
+#define SPI_Q_DED_GPIO_NUM   1 // dedicated Q pin
+#define SPI_WP_DED_GPIO_NUM  2 // dedicated WP pin
+#define SPI_HD_DED_GPIO_NUM  3 // dedicated HD pin
+#define SPI_CLK_DED_GPIO_NUM 4 // dedicated CLK pin
+#define SPI_D_DED_GPIO_NUM   5 // dedicated D pin
+
+#define MSPI_DED_GPIO_NUM_MIN 0
+#define MSPI_DED_GPIO_NUM_MAX 5
+
+#define MSPI_DED_PIN_DRV   0x00000003
+#define MSPI_DED_PIN_DRV_M ((MSPI_DED_PIN_DRV_V) << (MSPI_DED_PIN_DRV_S))
+#define MSPI_DED_PIN_DRV_V 0x3
+#define MSPI_DED_PIN_DRV_S 4
+
+#define MSPI_DED_PIN_WPD   (BIT(3))
+#define MSPI_DED_PIN_WPD_M (BIT(3))
+#define MSPI_DED_PIN_WPD_V 0x1
+#define MSPI_DED_PIN_WPD_S 3
+
+#define MSPI_DED_PIN_WPU   (BIT(2))
+#define MSPI_DED_PIN_WPU_M (BIT(2))
+#define MSPI_DED_PIN_WPU_V 0x1
+#define MSPI_DED_PIN_WPU_S 2
+
+#define MSPI_DED_PIN_SET_DRV(PIN_REG, drv) REG_SET_FIELD(PIN_REG, MSPI_DED_PIN_DRV, (drv));
+#define MSPI_DED_PIN_PULLUP_EN(PIN_REG)    REG_SET_BIT(PIN_REG, MSPI_DED_PIN_WPU)
+#define MSPI_DED_PIN_PULLUP_DIS(PIN_REG)   REG_CLR_BIT(PIN_REG, MSPI_DED_PIN_WPU)
+#define MSPI_DED_PIN_PULLDWN_EN(PIN_REG)   REG_SET_BIT(PIN_REG, MSPI_DED_PIN_WPD)
+#define MSPI_DED_PIN_PULLDWN_DIS(PIN_REG)  REG_CLR_BIT(PIN_REG, MSPI_DED_PIN_WPD)
+
+#define IOMUX_MSPI_PIN_CLK_EN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x0)
+/* IOMUX_MSPI_PIN_REG_CLK_EN : R/W ;bitpos:[0] ;default: 1'd1 ; */
+/*description: 1: auto clock gating on; 0: auto clock gating off.*/
+#define IOMUX_MSPI_PIN_REG_CLK_EN    (BIT(0))
+#define IOMUX_MSPI_PIN_REG_CLK_EN_M  (BIT(0))
+#define IOMUX_MSPI_PIN_REG_CLK_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_CLK_EN_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_D_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x1C)
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram d hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram d drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_D_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_D_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram d pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram d ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram d sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram d hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_D_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram d st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_D_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_D_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_D_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_Q_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x20)
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram q hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram q drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram q pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram q ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram q sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram q hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_Q_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram q st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_Q_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_Q_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_Q_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_WP_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x24)
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram wp hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram wp drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram wp pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram wp ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram wp sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram wp hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_WP_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram wp st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_WP_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_WP_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_WP_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_HOLD_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x28)
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram hold hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram hold drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram hold pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram hold ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram hold sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram hold hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram hold st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_HOLD_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ4_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x2C)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq4 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram dq4 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq4 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq4 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq4 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq4 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq4 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ4_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ5_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x30)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq5 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram dq5 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq5 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq5 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq5 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq5 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq5 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ5_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ6_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x34)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq6 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram dq6 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq6 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq6 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq6 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq6 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq6 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ6_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ7_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x38)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq7 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram dq7 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq7 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq7 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq7 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq7 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq7 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ7_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQS_0_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x3C)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dqs 0 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram dqs 0 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dqs 0 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dqs 0 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dqs 0 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dqs 0 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dqs 0 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_0_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_CK_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x40)
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram ck hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram ck drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram ck pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram ck ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram ck sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram ck hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_CK_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram ck st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_CK_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_CK_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_CK_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_CS_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x44)
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram cs hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV : R/W ;bitpos:[13:12] ;default: 2'd2 ; */
+/*description: psram cs drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram cs pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram cs ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram cs sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram cs hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_CS_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram cs st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_CS_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_CS_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_CS_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ8_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x48)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq8 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq8 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq8 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq8 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq8 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq8 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq8 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ8_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ9_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x4C)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq9 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq9 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq9 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq9 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq9 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq9 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq9 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ9_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ10_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x50)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq10 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq10 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq10 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq10 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq10 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq10 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq10 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ10_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ11_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x54)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq11 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq11 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq11 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq11 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq11 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq11 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq11 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ11_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ12_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x58)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq12 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq12 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq12 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq12 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq12 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq12 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq12 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ12_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ13_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x5C)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq13 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq13 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq13 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq13 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq13 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq13 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq13 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ13_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ14_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x60)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq14 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq14 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq14 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq14 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq14 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq14 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq14 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ14_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQ15_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x64)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dq15 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dq15 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dq15 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dq15 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dq15 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dq15 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dq15 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQ15_ST_S  0
+
+#define IOMUX_MSPI_PIN_PSRAM_DQS_1_PIN0_REG          (DR_REG_IOMUX_MSPI_PIN_BASE + 0x68)
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD : R/W ;bitpos:[15] ;default: 1'd0 ; */
+/*description: psram dqs_1 hold.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD    (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_M  (BIT(15))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_S  15
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV : R/W ;bitpos:[13:12] ;default: 2'd0 ; */
+/*description: psram dqs_1 drv.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_DRV_S  12
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PE : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: psram dqs_1 pe.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PE    (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PE_M  (BIT(11))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PE_S  11
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PS : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: psram dqs_1 ps.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PS    (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PS_M  (BIT(10))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_PS_S  10
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_IE : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Reserved.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_IE    (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_IE_M  (BIT(9))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_IE_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_IE_S  9
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HYS : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: psram dqs_1 sl.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HYS    (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HYS_M  (BIT(8))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HYS_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HYS_S  8
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: psram dqs_1 hold_en.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_EN    (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_EN_M  (BIT(2))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_EN_V  0x1
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_HOLD_EN_S  2
+/* IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST : R/W ;bitpos:[1:0] ;default: 2'd0 ; */
+/*description: psram dqs_1 st.*/
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST    0x00000003
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST_M  ((IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST_V)<<(IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST_S))
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST_V  0x3
+#define IOMUX_MSPI_PIN_REG_PSRAM_DQS_1_ST_S  0
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
+
+#endif /*_SOC_IOMUX_MSPI_PIN_REG_H_ */

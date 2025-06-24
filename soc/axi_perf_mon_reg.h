@@ -1,0 +1,4094 @@
+/*
+ * SPDX-FileCopyrightText: 2024 Espressif Systems (Shanghai) CO LTD
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+#ifndef _SOC_AXI_PERF_MON_REG_H_
+#define _SOC_AXI_PERF_MON_REG_H_
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "soc.h"
+
+#define AXI_PERF_MON_CLK_EN_REG          (DR_REG_AXI_PERF_MON_BASE + 0x0)
+/* AXI_PERF_MON_CLK_EN : R/W ;bitpos:[0] ;default: 1'd1 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_CLK_EN    (BIT(0))
+#define AXI_PERF_MON_CLK_EN_M  (BIT(0))
+#define AXI_PERF_MON_CLK_EN_V  0x1
+#define AXI_PERF_MON_CLK_EN_S  0
+
+#define AXI_PERF_MON_AGENT_SELECT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4)
+/* AXI_PERF_MON_AGENT_SELECT : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Select Agent in slot to be monitored, 4 bits means one agent number.*/
+#define AXI_PERF_MON_AGENT_SELECT    0xFFFFFFFF
+#define AXI_PERF_MON_AGENT_SELECT_M  ((AXI_PERF_MON_AGENT_SELECT_V)<<(AXI_PERF_MON_AGENT_SELECT_S))
+#define AXI_PERF_MON_AGENT_SELECT_V  0xFFFFFFFF
+#define AXI_PERF_MON_AGENT_SELECT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x8)
+/* AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xC)
+/* AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x10)
+/* AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x14)
+/* AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x18)
+/* AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1C)
+/* AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x20)
+/* AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x24)
+/* AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x28)
+/* AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2C)
+/* AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x30)
+/* AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x34)
+/* AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x38)
+/* AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3C)
+/* AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x40)
+/* AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x44)
+/* AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x48)
+/* AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4C)
+/* AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x50)
+/* AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x54)
+/* AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x58)
+/* AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x5C)
+/* AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x60)
+/* AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x64)
+/* AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x68)
+/* AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x6C)
+/* AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x70)
+/* AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x74)
+/* AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x78)
+/* AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x7C)
+/* AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x80)
+/* AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x84)
+/* AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x88)
+/* AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x8C)
+/* AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x90)
+/* AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x94)
+/* AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x98)
+/* AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x9C)
+/* AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER6_REG          (DR_REG_AXI_PERF_MON_BASE + 0xA0)
+/* AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER6_REG          (DR_REG_AXI_PERF_MON_BASE + 0xA4)
+/* AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER6_REG          (DR_REG_AXI_PERF_MON_BASE + 0xA8)
+/* AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER6_REG          (DR_REG_AXI_PERF_MON_BASE + 0xAC)
+/* AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_COUNTER7_REG          (DR_REG_AXI_PERF_MON_BASE + 0xB0)
+/* AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT_M  ((AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_COUNTER7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_COUNTER7_REG          (DR_REG_AXI_PERF_MON_BASE + 0xB4)
+/* AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT_M  ((AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_COUNTER7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_COUNTER7_REG          (DR_REG_AXI_PERF_MON_BASE + 0xB8)
+/* AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT_M  ((AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_COUNTER7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_COUNTER7_REG          (DR_REG_AXI_PERF_MON_BASE + 0xBC)
+/* AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT_M  ((AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_COUNTER7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_COUNTER7_REG          (DR_REG_AXI_PERF_MON_BASE + 0xC0)
+/* AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT_M  ((AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_COUNTER7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_COUNTER7_REG          (DR_REG_AXI_PERF_MON_BASE + 0xC4)
+/* AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The result for sel agent metric measured in this counter, [15:0] is min result,
+and [31:16] is max result.*/
+#define AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT_M  ((AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_COUNTER7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xC8)
+/* AXI_PERF_MON_SEL_AG0_RANGE0_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE0_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE0_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE0_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE0_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xCC)
+/* AXI_PERF_MON_SEL_AG1_RANGE0_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE0_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE0_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE0_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE0_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xD0)
+/* AXI_PERF_MON_SEL_AG2_RANGE0_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE0_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE0_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE0_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE0_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xD4)
+/* AXI_PERF_MON_SEL_AG3_RANGE0_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE0_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE0_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE0_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE0_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xD8)
+/* AXI_PERF_MON_SEL_AG4_RANGE0_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE0_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE0_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE0_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE0_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0xDC)
+/* AXI_PERF_MON_SEL_AG5_RANGE0_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE0_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE0_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE0_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE0_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE0_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE0_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0xE0)
+/* AXI_PERF_MON_SEL_AG0_RANGE1_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE1_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE1_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE1_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE1_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0xE4)
+/* AXI_PERF_MON_SEL_AG1_RANGE1_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE1_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE1_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE1_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE1_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0xE8)
+/* AXI_PERF_MON_SEL_AG2_RANGE1_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE1_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE1_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE1_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE1_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0xEC)
+/* AXI_PERF_MON_SEL_AG3_RANGE1_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE1_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE1_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE1_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE1_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0xF0)
+/* AXI_PERF_MON_SEL_AG4_RANGE1_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE1_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE1_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE1_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE1_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0xF4)
+/* AXI_PERF_MON_SEL_AG5_RANGE1_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE1_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE1_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE1_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE1_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE1_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE1_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0xF8)
+/* AXI_PERF_MON_SEL_AG0_RANGE2_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE2_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE2_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE2_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE2_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0xFC)
+/* AXI_PERF_MON_SEL_AG1_RANGE2_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE2_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE2_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE2_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE2_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x100)
+/* AXI_PERF_MON_SEL_AG2_RANGE2_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE2_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE2_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE2_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE2_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x104)
+/* AXI_PERF_MON_SEL_AG3_RANGE2_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE2_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE2_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE2_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE2_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x108)
+/* AXI_PERF_MON_SEL_AG4_RANGE2_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE2_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE2_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE2_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE2_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x10C)
+/* AXI_PERF_MON_SEL_AG5_RANGE2_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE2_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE2_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE2_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE2_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE2_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE2_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x110)
+/* AXI_PERF_MON_SEL_AG0_RANGE3_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE3_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE3_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE3_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE3_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x114)
+/* AXI_PERF_MON_SEL_AG1_RANGE3_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE3_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE3_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE3_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE3_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x118)
+/* AXI_PERF_MON_SEL_AG2_RANGE3_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE3_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE3_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE3_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE3_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x11C)
+/* AXI_PERF_MON_SEL_AG3_RANGE3_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE3_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE3_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE3_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE3_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x120)
+/* AXI_PERF_MON_SEL_AG4_RANGE3_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE3_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE3_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE3_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE3_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x124)
+/* AXI_PERF_MON_SEL_AG5_RANGE3_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE3_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE3_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE3_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE3_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE3_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE3_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x128)
+/* AXI_PERF_MON_SEL_AG0_RANGE4_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE4_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE4_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE4_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE4_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x12C)
+/* AXI_PERF_MON_SEL_AG1_RANGE4_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE4_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE4_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE4_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE4_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x130)
+/* AXI_PERF_MON_SEL_AG2_RANGE4_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE4_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE4_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE4_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE4_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x134)
+/* AXI_PERF_MON_SEL_AG3_RANGE4_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE4_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE4_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE4_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE4_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x138)
+/* AXI_PERF_MON_SEL_AG4_RANGE4_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE4_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE4_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE4_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE4_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x13C)
+/* AXI_PERF_MON_SEL_AG5_RANGE4_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE4_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE4_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE4_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE4_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE4_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE4_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x140)
+/* AXI_PERF_MON_SEL_AG0_RANGE5_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE5_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE5_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE5_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE5_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x144)
+/* AXI_PERF_MON_SEL_AG1_RANGE5_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE5_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE5_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE5_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE5_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x148)
+/* AXI_PERF_MON_SEL_AG2_RANGE5_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE5_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE5_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE5_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE5_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x14C)
+/* AXI_PERF_MON_SEL_AG3_RANGE5_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE5_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE5_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE5_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE5_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x150)
+/* AXI_PERF_MON_SEL_AG4_RANGE5_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE5_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE5_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE5_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE5_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x154)
+/* AXI_PERF_MON_SEL_AG5_RANGE5_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE5_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE5_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE5_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE5_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE5_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE5_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x158)
+/* AXI_PERF_MON_SEL_AG0_RANGE6_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE6_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE6_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE6_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE6_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x15C)
+/* AXI_PERF_MON_SEL_AG1_RANGE6_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE6_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE6_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE6_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE6_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x160)
+/* AXI_PERF_MON_SEL_AG2_RANGE6_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE6_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE6_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE6_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE6_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x164)
+/* AXI_PERF_MON_SEL_AG3_RANGE6_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE6_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE6_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE6_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE6_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x168)
+/* AXI_PERF_MON_SEL_AG4_RANGE6_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE6_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE6_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE6_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE6_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x16C)
+/* AXI_PERF_MON_SEL_AG5_RANGE6_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE6_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE6_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE6_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE6_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE6_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE6_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x170)
+/* AXI_PERF_MON_SEL_AG0_RANGE7_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_RANGE7_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE7_RESULT_M  ((AXI_PERF_MON_SEL_AG0_RANGE7_RESULT_V)<<(AXI_PERF_MON_SEL_AG0_RANGE7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG0_RANGE7_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RANGE7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x174)
+/* AXI_PERF_MON_SEL_AG1_RANGE7_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_RANGE7_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE7_RESULT_M  ((AXI_PERF_MON_SEL_AG1_RANGE7_RESULT_V)<<(AXI_PERF_MON_SEL_AG1_RANGE7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG1_RANGE7_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RANGE7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x178)
+/* AXI_PERF_MON_SEL_AG2_RANGE7_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_RANGE7_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE7_RESULT_M  ((AXI_PERF_MON_SEL_AG2_RANGE7_RESULT_V)<<(AXI_PERF_MON_SEL_AG2_RANGE7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG2_RANGE7_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RANGE7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x17C)
+/* AXI_PERF_MON_SEL_AG3_RANGE7_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_RANGE7_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE7_RESULT_M  ((AXI_PERF_MON_SEL_AG3_RANGE7_RESULT_V)<<(AXI_PERF_MON_SEL_AG3_RANGE7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG3_RANGE7_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RANGE7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x180)
+/* AXI_PERF_MON_SEL_AG4_RANGE7_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_RANGE7_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE7_RESULT_M  ((AXI_PERF_MON_SEL_AG4_RANGE7_RESULT_V)<<(AXI_PERF_MON_SEL_AG4_RANGE7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG4_RANGE7_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RANGE7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x184)
+/* AXI_PERF_MON_SEL_AG5_RANGE7_RESULT : RO ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The interval statistics results in this counter for sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_RANGE7_RESULT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE7_RESULT_M  ((AXI_PERF_MON_SEL_AG5_RANGE7_RESULT_V)<<(AXI_PERF_MON_SEL_AG5_RANGE7_RESULT_S))
+#define AXI_PERF_MON_SEL_AG5_RANGE7_RESULT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RANGE7_RESULT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x188)
+/* AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x18C)
+/* AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x190)
+/* AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x194)
+/* AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x198)
+/* AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x19C)
+/* AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1A0)
+/* AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1A4)
+/* AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1A8)
+/* AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1AC)
+/* AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1B0)
+/* AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1B4)
+/* AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1B8)
+/* AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1BC)
+/* AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1C0)
+/* AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1C4)
+/* AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1C8)
+/* AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1CC)
+/* AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1D0)
+/* AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1D4)
+/* AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1D8)
+/* AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1DC)
+/* AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1E0)
+/* AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1E4)
+/* AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for ARLEN,
+[23:8] for ARID.*/
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1E8)
+/* AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1EC)
+/* AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1F0)
+/* AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1F4)
+/* AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1F8)
+/* AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x1FC)
+/* AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0_M  ((AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0_V)<<(AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0_S))
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x200)
+/* AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x204)
+/* AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x208)
+/* AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x20C)
+/* AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x210)
+/* AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x214)
+/* AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1_M  ((AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1_V)<<(AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1_S))
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x218)
+/* AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x21C)
+/* AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x220)
+/* AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x224)
+/* AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x228)
+/* AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x22C)
+/* AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2_M  ((AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2_V)<<(AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2_S))
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x230)
+/* AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x234)
+/* AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x238)
+/* AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x23C)
+/* AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x240)
+/* AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x244)
+/* AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3 : RO ;bitpos:[19:0] ;default: 20'd0 ; */
+/*description: The latest x axi transaction information record for sel agent, [7:0] for AWLEN,
+[23:8] for AWID.*/
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3    0x000FFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3_M  ((AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3_V)<<(AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3_S))
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3_V  0xFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_AXI_INFO_RECORD3_S  0
+
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x248)
+/* AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0_M  ((AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0_V)<<(AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0_S))
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x24C)
+/* AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0_M  ((AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0_V)<<(AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0_S))
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x250)
+/* AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0_M  ((AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0_V)<<(AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0_S))
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x254)
+/* AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0_M  ((AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0_V)<<(AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0_S))
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x258)
+/* AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0_M  ((AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0_V)<<(AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0_S))
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x25C)
+/* AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0_M  ((AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0_V)<<(AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0_S))
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x260)
+/* AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1_M  ((AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1_V)<<(AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1_S))
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x264)
+/* AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1_M  ((AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1_V)<<(AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1_S))
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x268)
+/* AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1_M  ((AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1_V)<<(AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1_S))
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x26C)
+/* AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1_M  ((AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1_V)<<(AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1_S))
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x270)
+/* AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1_M  ((AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1_V)<<(AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1_S))
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x274)
+/* AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1_M  ((AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1_V)<<(AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1_S))
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x278)
+/* AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2_M  ((AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2_V)<<(AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2_S))
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x27C)
+/* AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2_M  ((AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2_V)<<(AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2_S))
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x280)
+/* AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2_M  ((AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2_V)<<(AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2_S))
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x284)
+/* AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2_M  ((AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2_V)<<(AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2_S))
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x288)
+/* AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2_M  ((AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2_V)<<(AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2_S))
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x28C)
+/* AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2_M  ((AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2_V)<<(AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2_S))
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x290)
+/* AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3_M  ((AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3_V)<<(AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3_S))
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_DATA3_S  0
+
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x294)
+/* AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3_M  ((AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3_V)<<(AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3_S))
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_DATA3_S  0
+
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x298)
+/* AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3_M  ((AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3_V)<<(AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3_S))
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_DATA3_S  0
+
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x29C)
+/* AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3_M  ((AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3_V)<<(AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3_S))
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_DATA3_S  0
+
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2A0)
+/* AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3_M  ((AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3_V)<<(AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3_S))
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_DATA3_S  0
+
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2A4)
+/* AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3 : RO ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: The latest x bandwidth date num in config time record for sel agent, [15:0] for
+Read and [31:16] for write.*/
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3_M  ((AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3_V)<<(AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3_S))
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_DATA3_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2A8)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE0_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2AC)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE0_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2B0)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE0_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2B4)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE0_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2B8)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE0_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2BC)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE0_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2C0)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE1_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2C4)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE1_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2C8)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE1_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2CC)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE1_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2D0)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE1_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2D4)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE1_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2D8)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE2_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2DC)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE2_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2E0)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE2_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2E4)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE2_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2E8)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE2_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2EC)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE2_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2F0)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE3_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2F4)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE3_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2F8)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE3_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x2FC)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE3_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x300)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE3_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_REG          (DR_REG_AXI_PERF_MON_BASE + 0x304)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE3_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x308)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE4_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x30C)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE4_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x310)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE4_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x314)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE4_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x318)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE4_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_REG          (DR_REG_AXI_PERF_MON_BASE + 0x31C)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE4_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x320)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE5_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x324)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE5_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x328)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE5_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x32C)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE5_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x330)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE5_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_REG          (DR_REG_AXI_PERF_MON_BASE + 0x334)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE5_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x338)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE6_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x33C)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE6_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x340)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE6_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x344)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE6_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x348)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE6_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_REG          (DR_REG_AXI_PERF_MON_BASE + 0x34C)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE6_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x350)
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_RANGE7_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x354)
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_RANGE7_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x358)
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_RANGE7_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x35C)
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_RANGE7_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x360)
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_RANGE7_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_REG          (DR_REG_AXI_PERF_MON_BASE + 0x364)
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: The x Lower limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_LOW_S  16
+/* AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: The x Upper limit of interval statistics for sel metric in sel agent.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH_M  ((AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_RANGE7_CNT_HIGH_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x368)
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x36C)
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x370)
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x374)
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x378)
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x37C)
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x380)
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x384)
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x388)
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x38C)
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x390)
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x394)
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x398)
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x39C)
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3A0)
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3A4)
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3A8)
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3AC)
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr mask of addr filter function for sel agent, mask bit will not compare
+with addr.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3B0)
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3B4)
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3B8)
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3BC)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3C0)
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3C4)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3C8)
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3CC)
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3D0)
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3D4)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3D8)
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3DC)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3E0)
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3E4)
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3E8)
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3EC)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3F0)
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3F4)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Write addr mask of addr filter function for sel agent, mask bit will not compare
+ with addr.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_MASK2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3F8)
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x3FC)
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x400)
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x404)
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x408)
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x40C)
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x410)
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x414)
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x418)
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x41C)
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x420)
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x424)
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x428)
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x42C)
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x430)
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x434)
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x438)
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x43C)
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x440)
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x444)
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x448)
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x44C)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x450)
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0_REG          (DR_REG_AXI_PERF_MON_BASE + 0x454)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER0_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x458)
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x45C)
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x460)
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x464)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x468)
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x46C)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x470)
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x474)
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x478)
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x47C)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x480)
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x484)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Read addr filter of addr filter function for sel agent, no mask bit in addr will
+ compare with addr filter, if compare result same will pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER2_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x488)
+/* AXI_PERF_MON_SEL_AG0_METRIC_SELECT1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT1_M  ((AXI_PERF_MON_SEL_AG0_METRIC_SELECT1_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_SELECT1_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT1_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x48C)
+/* AXI_PERF_MON_SEL_AG1_METRIC_SELECT1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT1_M  ((AXI_PERF_MON_SEL_AG1_METRIC_SELECT1_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_SELECT1_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT1_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x490)
+/* AXI_PERF_MON_SEL_AG2_METRIC_SELECT1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT1_M  ((AXI_PERF_MON_SEL_AG2_METRIC_SELECT1_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_SELECT1_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT1_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x494)
+/* AXI_PERF_MON_SEL_AG3_METRIC_SELECT1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT1_M  ((AXI_PERF_MON_SEL_AG3_METRIC_SELECT1_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_SELECT1_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT1_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x498)
+/* AXI_PERF_MON_SEL_AG4_METRIC_SELECT1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT1_M  ((AXI_PERF_MON_SEL_AG4_METRIC_SELECT1_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_SELECT1_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT1_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x49C)
+/* AXI_PERF_MON_SEL_AG5_METRIC_SELECT1 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT1    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT1_M  ((AXI_PERF_MON_SEL_AG5_METRIC_SELECT1_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_SELECT1_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT1_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT1_S  0
+
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4A0)
+/* AXI_PERF_MON_SEL_AG0_METRIC_SELECT2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT2_M  ((AXI_PERF_MON_SEL_AG0_METRIC_SELECT2_V)<<(AXI_PERF_MON_SEL_AG0_METRIC_SELECT2_S))
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG0_METRIC_SELECT2_S  0
+
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4A4)
+/* AXI_PERF_MON_SEL_AG1_METRIC_SELECT2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT2_M  ((AXI_PERF_MON_SEL_AG1_METRIC_SELECT2_V)<<(AXI_PERF_MON_SEL_AG1_METRIC_SELECT2_S))
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG1_METRIC_SELECT2_S  0
+
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4A8)
+/* AXI_PERF_MON_SEL_AG2_METRIC_SELECT2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT2_M  ((AXI_PERF_MON_SEL_AG2_METRIC_SELECT2_V)<<(AXI_PERF_MON_SEL_AG2_METRIC_SELECT2_S))
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG2_METRIC_SELECT2_S  0
+
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4AC)
+/* AXI_PERF_MON_SEL_AG3_METRIC_SELECT2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT2_M  ((AXI_PERF_MON_SEL_AG3_METRIC_SELECT2_V)<<(AXI_PERF_MON_SEL_AG3_METRIC_SELECT2_S))
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG3_METRIC_SELECT2_S  0
+
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4B0)
+/* AXI_PERF_MON_SEL_AG4_METRIC_SELECT2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT2_M  ((AXI_PERF_MON_SEL_AG4_METRIC_SELECT2_V)<<(AXI_PERF_MON_SEL_AG4_METRIC_SELECT2_S))
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG4_METRIC_SELECT2_S  0
+
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT2_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4B4)
+/* AXI_PERF_MON_SEL_AG5_METRIC_SELECT2 : R/W ;bitpos:[31:0] ;default: 32'd0 ; */
+/*description: Metric select Reg for sel agent, each agent use 8 bits, low 5 bits means which m
+etric is selected for current counter, high 3 bits means range metric this count
+er measured, a counter can use metric and range measure at the same time.*/
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT2    0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT2_M  ((AXI_PERF_MON_SEL_AG5_METRIC_SELECT2_V)<<(AXI_PERF_MON_SEL_AG5_METRIC_SELECT2_S))
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT2_V  0xFFFFFFFF
+#define AXI_PERF_MON_SEL_AG5_METRIC_SELECT2_S  0
+
+#define AXI_PERF_MON_SEL_AG_ADDR_REGION_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4B8)
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL : R/W ;bitpos:[29:27] ;default: 3'd0 ; */
+/*description: SW config Write region select, use with mask and filter, only when addr in one r
+egion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_REGION_SEL_S  27
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL : R/W ;bitpos:[26:24] ;default: 3'd0 ; */
+/*description: SW config Write region select, use with mask and filter, only when addr in one r
+egion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_REGION_SEL_S  24
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL : R/W ;bitpos:[23:21] ;default: 3'd0 ; */
+/*description: SW config Write region select, use with mask and filter, only when addr in one r
+egion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_REGION_SEL_S  21
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL : R/W ;bitpos:[20:18] ;default: 3'd0 ; */
+/*description: SW config Write region select, use with mask and filter, only when addr in one r
+egion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_REGION_SEL_S  18
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL : R/W ;bitpos:[17:15] ;default: 3'd0 ; */
+/*description: SW config Read region select, use with mask and filter, only when addr in one re
+gion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_REGION_SEL_S  15
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL : R/W ;bitpos:[14:12] ;default: 3'd0 ; */
+/*description: SW config Read region select, use with mask and filter, only when addr in one re
+gion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_REGION_SEL_S  12
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL : R/W ;bitpos:[11:9] ;default: 3'd0 ; */
+/*description: SW config Read region select, use with mask and filter, only when addr in one re
+gion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_REGION_SEL_S  9
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL : R/W ;bitpos:[8:6] ;default: 3'd0 ; */
+/*description: SW config Read region select, use with mask and filter, only when addr in one re
+gion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_REGION_SEL_S  6
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL : R/W ;bitpos:[5:3] ;default: 3'd0 ; */
+/*description: SW config Read region select, use with mask and filter, only when addr in one re
+gion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_REGION_SEL_S  3
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL : R/W ;bitpos:[2:0] ;default: 3'd0 ; */
+/*description: SW config Read region select, use with mask and filter, only when addr in one re
+gion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_REGION_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG_ADDR_REGION_SEL1_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4BC)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL : R/W ;bitpos:[5:3] ;default: 3'd0 ; */
+/*description: SW config Write region select, use with mask and filter, only when addr in one r
+egion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_REGION_SEL_S  3
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL : R/W ;bitpos:[2:0] ;default: 3'd0 ; */
+/*description: SW config Write region select, use with mask and filter, only when addr in one r
+egion and this region has been sel, will measure the transaction data num.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL    0x00000007
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL_M  ((AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL_V)<<(AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL_V  0x7
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_REGION_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG_ADDR_FILTER_EN_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4C0)
+/* AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER_EN : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: Enable write addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER_EN    (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER_EN_M  (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_WR_ADDR_FILTER_EN_S  11
+/* AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER_EN : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: Enable write addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER_EN    (BIT(10))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER_EN_M  (BIT(10))
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_WR_ADDR_FILTER_EN_S  10
+/* AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER_EN : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Enable write addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER_EN    (BIT(9))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER_EN_M  (BIT(9))
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_WR_ADDR_FILTER_EN_S  9
+/* AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER_EN : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: Enable write addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER_EN    (BIT(8))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER_EN_M  (BIT(8))
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_WR_ADDR_FILTER_EN_S  8
+/* AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER_EN : R/W ;bitpos:[7] ;default: 1'd0 ; */
+/*description: Enable write addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER_EN    (BIT(7))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER_EN_M  (BIT(7))
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_WR_ADDR_FILTER_EN_S  7
+/* AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER_EN : R/W ;bitpos:[6] ;default: 1'd0 ; */
+/*description: Enable write addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER_EN    (BIT(6))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER_EN_M  (BIT(6))
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_WR_ADDR_FILTER_EN_S  6
+/* AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER_EN : R/W ;bitpos:[5] ;default: 1'd0 ; */
+/*description: Enable read addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER_EN    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER_EN_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RD_ADDR_FILTER_EN_S  5
+/* AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER_EN : R/W ;bitpos:[4] ;default: 1'd0 ; */
+/*description: Enable read addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER_EN    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER_EN_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RD_ADDR_FILTER_EN_S  4
+/* AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER_EN : R/W ;bitpos:[3] ;default: 1'd0 ; */
+/*description: Enable read addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER_EN    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER_EN_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RD_ADDR_FILTER_EN_S  3
+/* AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: Enable read addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER_EN    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER_EN_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RD_ADDR_FILTER_EN_S  2
+/* AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER_EN : R/W ;bitpos:[1] ;default: 1'd0 ; */
+/*description: Enable read addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER_EN    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER_EN_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RD_ADDR_FILTER_EN_S  1
+/* AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER_EN : R/W ;bitpos:[0] ;default: 1'd0 ; */
+/*description: Enable read addr filter function, if 0, all address access will be record.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER_EN    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER_EN_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RD_ADDR_FILTER_EN_S  0
+
+#define AXI_PERF_MON_SEL_AG_SW_RECORD_STOP_EN_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4C4)
+/* AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_EN : WT ;bitpos:[5] ;default: 1'd0 ; */
+/*description: SW use to stop event log function, record information will keep.*/
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_EN    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_EN_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_EN_S  5
+/* AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_EN : WT ;bitpos:[4] ;default: 1'd0 ; */
+/*description: SW use to stop event log function, record information will keep.*/
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_EN    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_EN_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_EN_S  4
+/* AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_EN : WT ;bitpos:[3] ;default: 1'd0 ; */
+/*description: SW use to stop event log function, record information will keep.*/
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_EN    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_EN_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_EN_S  3
+/* AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_EN : WT ;bitpos:[2] ;default: 1'd0 ; */
+/*description: SW use to stop event log function, record information will keep.*/
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_EN    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_EN_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_EN_S  2
+/* AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_EN : WT ;bitpos:[1] ;default: 1'd0 ; */
+/*description: SW use to stop event log function, record information will keep.*/
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_EN    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_EN_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_EN_S  1
+/* AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_EN : WT ;bitpos:[0] ;default: 1'd0 ; */
+/*description: SW use to stop event log function, record information will keep.*/
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_EN    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_EN_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_EN_S  0
+
+#define AXI_PERF_MON_SEL_AG_SW_RECORD_STOP_CLR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4C8)
+/* AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_CLR : WT ;bitpos:[5] ;default: 1'd0 ; */
+/*description: SW use to clear event log function stop, record new transaction from now.*/
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_CLR    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_CLR_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_CLR_S  5
+/* AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_CLR : WT ;bitpos:[4] ;default: 1'd0 ; */
+/*description: SW use to clear event log function stop, record new transaction from now.*/
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_CLR    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_CLR_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_CLR_S  4
+/* AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_CLR : WT ;bitpos:[3] ;default: 1'd0 ; */
+/*description: SW use to clear event log function stop, record new transaction from now.*/
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_CLR    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_CLR_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_CLR_S  3
+/* AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_CLR : WT ;bitpos:[2] ;default: 1'd0 ; */
+/*description: SW use to clear event log function stop, record new transaction from now.*/
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_CLR    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_CLR_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_CLR_S  2
+/* AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_CLR : WT ;bitpos:[1] ;default: 1'd0 ; */
+/*description: SW use to clear event log function stop, record new transaction from now.*/
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_CLR    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_CLR_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_CLR_S  1
+/* AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_CLR : WT ;bitpos:[0] ;default: 1'd0 ; */
+/*description: SW use to clear event log function stop, record new transaction from now.*/
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_CLR    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_CLR_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_CLR_S  0
+
+#define AXI_PERF_MON_SEL_AG_INS_BANDW_TEST_EN_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4CC)
+/* AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TEST_EN : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TEST_EN    (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TEST_EN_M  (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TEST_EN_S  11
+/* AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TEST_EN : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TEST_EN    (BIT(10))
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TEST_EN_M  (BIT(10))
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TEST_EN_S  10
+/* AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TEST_EN : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TEST_EN    (BIT(9))
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TEST_EN_M  (BIT(9))
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TEST_EN_S  9
+/* AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TEST_EN : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TEST_EN    (BIT(8))
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TEST_EN_M  (BIT(8))
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TEST_EN_S  8
+/* AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TEST_EN : R/W ;bitpos:[7] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TEST_EN    (BIT(7))
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TEST_EN_M  (BIT(7))
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TEST_EN_S  7
+/* AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TEST_EN : R/W ;bitpos:[6] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TEST_EN    (BIT(6))
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TEST_EN_M  (BIT(6))
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TEST_EN_S  6
+/* AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TEST_EN : R/W ;bitpos:[5] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TEST_EN    (BIT(5))
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TEST_EN_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TEST_EN_S  5
+/* AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TEST_EN : R/W ;bitpos:[4] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TEST_EN    (BIT(4))
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TEST_EN_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TEST_EN_S  4
+/* AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TEST_EN : R/W ;bitpos:[3] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TEST_EN    (BIT(3))
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TEST_EN_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TEST_EN_S  3
+/* AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TEST_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TEST_EN    (BIT(2))
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TEST_EN_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TEST_EN_S  2
+/* AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TEST_EN : R/W ;bitpos:[1] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TEST_EN    (BIT(1))
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TEST_EN_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TEST_EN_S  1
+/* AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TEST_EN : R/W ;bitpos:[0] ;default: 1'd0 ; */
+/*description: Enable Read instantaneous bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TEST_EN    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TEST_EN_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TEST_EN_S  0
+
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_DATA_LIMIT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4D0)
+/* AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_WR_DATA_LIMIT_S  16
+/* AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_SW_RECORD_STOP_RD_DATA_LIMIT_S  0
+
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_DATA_LIMIT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4D4)
+/* AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_WR_DATA_LIMIT_S  16
+/* AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_SW_RECORD_STOP_RD_DATA_LIMIT_S  0
+
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_DATA_LIMIT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4D8)
+/* AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_WR_DATA_LIMIT_S  16
+/* AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_SW_RECORD_STOP_RD_DATA_LIMIT_S  0
+
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_DATA_LIMIT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4DC)
+/* AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_WR_DATA_LIMIT_S  16
+/* AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_SW_RECORD_STOP_RD_DATA_LIMIT_S  0
+
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_DATA_LIMIT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4E0)
+/* AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_WR_DATA_LIMIT_S  16
+/* AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_SW_RECORD_STOP_RD_DATA_LIMIT_S  0
+
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_DATA_LIMIT_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4E4)
+/* AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_WR_DATA_LIMIT_S  16
+/* AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test data lower limit, when touch this limit, intr
+enable.*/
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT_M  ((AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT_V)<<(AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT_S))
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_SW_RECORD_STOP_RD_DATA_LIMIT_S  0
+
+#define AXI_PERF_MON_SEL_AG0_ID_MASK_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4E8)
+/* AXI_PERF_MON_SEL_AG0_WR_ID_MASK : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Write id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG0_WR_ID_MASK_M  ((AXI_PERF_MON_SEL_AG0_WR_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG0_WR_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ID_MASK_S  12
+/* AXI_PERF_MON_SEL_AG0_RD_ID_MASK : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Read id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG0_RD_ID_MASK_M  ((AXI_PERF_MON_SEL_AG0_RD_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG0_RD_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ID_MASK_S  0
+
+#define AXI_PERF_MON_SEL_AG1_ID_MASK_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4EC)
+/* AXI_PERF_MON_SEL_AG1_WR_ID_MASK : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Write id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG1_WR_ID_MASK_M  ((AXI_PERF_MON_SEL_AG1_WR_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG1_WR_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ID_MASK_S  12
+/* AXI_PERF_MON_SEL_AG1_RD_ID_MASK : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Read id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG1_RD_ID_MASK_M  ((AXI_PERF_MON_SEL_AG1_RD_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG1_RD_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ID_MASK_S  0
+
+#define AXI_PERF_MON_SEL_AG2_ID_MASK_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4F0)
+/* AXI_PERF_MON_SEL_AG2_WR_ID_MASK : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Write id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG2_WR_ID_MASK_M  ((AXI_PERF_MON_SEL_AG2_WR_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG2_WR_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ID_MASK_S  12
+/* AXI_PERF_MON_SEL_AG2_RD_ID_MASK : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Read id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG2_RD_ID_MASK_M  ((AXI_PERF_MON_SEL_AG2_RD_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG2_RD_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ID_MASK_S  0
+
+#define AXI_PERF_MON_SEL_AG3_ID_MASK_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4F4)
+/* AXI_PERF_MON_SEL_AG3_WR_ID_MASK : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Write id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG3_WR_ID_MASK_M  ((AXI_PERF_MON_SEL_AG3_WR_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG3_WR_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ID_MASK_S  12
+/* AXI_PERF_MON_SEL_AG3_RD_ID_MASK : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Read id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG3_RD_ID_MASK_M  ((AXI_PERF_MON_SEL_AG3_RD_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG3_RD_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ID_MASK_S  0
+
+#define AXI_PERF_MON_SEL_AG4_ID_MASK_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4F8)
+/* AXI_PERF_MON_SEL_AG4_WR_ID_MASK : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Write id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG4_WR_ID_MASK_M  ((AXI_PERF_MON_SEL_AG4_WR_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG4_WR_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ID_MASK_S  12
+/* AXI_PERF_MON_SEL_AG4_RD_ID_MASK : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Read id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG4_RD_ID_MASK_M  ((AXI_PERF_MON_SEL_AG4_RD_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG4_RD_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ID_MASK_S  0
+
+#define AXI_PERF_MON_SEL_AG5_ID_MASK_REG          (DR_REG_AXI_PERF_MON_BASE + 0x4FC)
+/* AXI_PERF_MON_SEL_AG5_WR_ID_MASK : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Write id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG5_WR_ID_MASK_M  ((AXI_PERF_MON_SEL_AG5_WR_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG5_WR_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ID_MASK_S  12
+/* AXI_PERF_MON_SEL_AG5_RD_ID_MASK : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Read id mask, ignore mask id bits.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ID_MASK    0x00000FFF
+#define AXI_PERF_MON_SEL_AG5_RD_ID_MASK_M  ((AXI_PERF_MON_SEL_AG5_RD_ID_MASK_V)<<(AXI_PERF_MON_SEL_AG5_RD_ID_MASK_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ID_MASK_V  0xFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ID_MASK_S  0
+
+#define AXI_PERF_MON_SEL_AG0_ID_FILTER_REG          (DR_REG_AXI_PERF_MON_BASE + 0x500)
+/* AXI_PERF_MON_SEL_AG0_WR_ID_FILTER : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_WR_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG0_WR_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG0_WR_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG0_WR_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG0_WR_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG0_WR_ID_FILTER_S  12
+/* AXI_PERF_MON_SEL_AG0_RD_ID_FILTER : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG0_RD_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG0_RD_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG0_RD_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG0_RD_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG0_RD_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG0_RD_ID_FILTER_S  0
+
+#define AXI_PERF_MON_SEL_AG1_ID_FILTER_REG          (DR_REG_AXI_PERF_MON_BASE + 0x504)
+/* AXI_PERF_MON_SEL_AG1_WR_ID_FILTER : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_WR_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG1_WR_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG1_WR_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG1_WR_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG1_WR_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG1_WR_ID_FILTER_S  12
+/* AXI_PERF_MON_SEL_AG1_RD_ID_FILTER : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG1_RD_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG1_RD_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG1_RD_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG1_RD_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG1_RD_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG1_RD_ID_FILTER_S  0
+
+#define AXI_PERF_MON_SEL_AG2_ID_FILTER_REG          (DR_REG_AXI_PERF_MON_BASE + 0x508)
+/* AXI_PERF_MON_SEL_AG2_WR_ID_FILTER : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_WR_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG2_WR_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG2_WR_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG2_WR_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG2_WR_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG2_WR_ID_FILTER_S  12
+/* AXI_PERF_MON_SEL_AG2_RD_ID_FILTER : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG2_RD_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG2_RD_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG2_RD_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG2_RD_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG2_RD_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG2_RD_ID_FILTER_S  0
+
+#define AXI_PERF_MON_SEL_AG3_ID_FILTER_REG          (DR_REG_AXI_PERF_MON_BASE + 0x50C)
+/* AXI_PERF_MON_SEL_AG3_WR_ID_FILTER : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_WR_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG3_WR_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG3_WR_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG3_WR_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG3_WR_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG3_WR_ID_FILTER_S  12
+/* AXI_PERF_MON_SEL_AG3_RD_ID_FILTER : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG3_RD_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG3_RD_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG3_RD_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG3_RD_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG3_RD_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG3_RD_ID_FILTER_S  0
+
+#define AXI_PERF_MON_SEL_AG4_ID_FILTER_REG          (DR_REG_AXI_PERF_MON_BASE + 0x510)
+/* AXI_PERF_MON_SEL_AG4_WR_ID_FILTER : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_WR_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG4_WR_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG4_WR_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG4_WR_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG4_WR_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG4_WR_ID_FILTER_S  12
+/* AXI_PERF_MON_SEL_AG4_RD_ID_FILTER : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG4_RD_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG4_RD_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG4_RD_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG4_RD_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG4_RD_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG4_RD_ID_FILTER_S  0
+
+#define AXI_PERF_MON_SEL_AG5_ID_FILTER_REG          (DR_REG_AXI_PERF_MON_BASE + 0x514)
+/* AXI_PERF_MON_SEL_AG5_WR_ID_FILTER : R/W ;bitpos:[23:12] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_WR_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG5_WR_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG5_WR_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG5_WR_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG5_WR_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG5_WR_ID_FILTER_S  12
+/* AXI_PERF_MON_SEL_AG5_RD_ID_FILTER : R/W ;bitpos:[11:0] ;default: 12'd0 ; */
+/*description: Use with mask, no mask bits must same as filter bits, the pass filter.*/
+#define AXI_PERF_MON_SEL_AG5_RD_ID_FILTER    0x00000FFF
+#define AXI_PERF_MON_SEL_AG5_RD_ID_FILTER_M  ((AXI_PERF_MON_SEL_AG5_RD_ID_FILTER_V)<<(AXI_PERF_MON_SEL_AG5_RD_ID_FILTER_S))
+#define AXI_PERF_MON_SEL_AG5_RD_ID_FILTER_V  0xFFF
+#define AXI_PERF_MON_SEL_AG5_RD_ID_FILTER_S  0
+
+#define AXI_PERF_MON_SEL_AG_BANDW_TEST_EN_REG          (DR_REG_AXI_PERF_MON_BASE + 0x518)
+/* AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_EN : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: Enable Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_EN    (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_EN_M  (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_EN_S  11
+/* AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_EN : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_EN    (BIT(10))
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_EN_M  (BIT(10))
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_EN_S  10
+/* AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_EN : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Enable Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_EN    (BIT(9))
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_EN_M  (BIT(9))
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_EN_S  9
+/* AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_EN : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_EN    (BIT(8))
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_EN_M  (BIT(8))
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_EN_S  8
+/* AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_EN : R/W ;bitpos:[7] ;default: 1'd0 ; */
+/*description: Enable Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_EN    (BIT(7))
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_EN_M  (BIT(7))
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_EN_S  7
+/* AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_EN : R/W ;bitpos:[6] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_EN    (BIT(6))
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_EN_M  (BIT(6))
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_EN_S  6
+/* AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_EN : R/W ;bitpos:[5] ;default: 1'd0 ; */
+/*description: Enable Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_EN    (BIT(5))
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_EN_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_EN_S  5
+/* AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_EN : R/W ;bitpos:[4] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_EN    (BIT(4))
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_EN_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_EN_S  4
+/* AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_EN : R/W ;bitpos:[3] ;default: 1'd0 ; */
+/*description: Enable Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_EN    (BIT(3))
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_EN_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_EN_S  3
+/* AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_EN : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_EN    (BIT(2))
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_EN_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_EN_S  2
+/* AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_EN : R/W ;bitpos:[1] ;default: 1'd0 ; */
+/*description: Enable Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_EN    (BIT(1))
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_EN_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_EN_S  1
+/* AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_EN : R/W ;bitpos:[0] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_EN    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_EN_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_EN_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_EN_S  0
+
+#define AXI_PERF_MON_SEL_AG_BANDW_TEST_STOP_REG          (DR_REG_AXI_PERF_MON_BASE + 0x51C)
+/* AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_STOP : R/W ;bitpos:[11] ;default: 1'd0 ; */
+/*description: Stop Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_STOP    (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_STOP_M  (BIT(11))
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TEST_STOP_S  11
+/* AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_STOP : R/W ;bitpos:[10] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_STOP    (BIT(10))
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_STOP_M  (BIT(10))
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TEST_STOP_S  10
+/* AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_STOP : R/W ;bitpos:[9] ;default: 1'd0 ; */
+/*description: Stop Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_STOP    (BIT(9))
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_STOP_M  (BIT(9))
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TEST_STOP_S  9
+/* AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_STOP : R/W ;bitpos:[8] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_STOP    (BIT(8))
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_STOP_M  (BIT(8))
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TEST_STOP_S  8
+/* AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_STOP : R/W ;bitpos:[7] ;default: 1'd0 ; */
+/*description: Stop Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_STOP    (BIT(7))
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_STOP_M  (BIT(7))
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TEST_STOP_S  7
+/* AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_STOP : R/W ;bitpos:[6] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_STOP    (BIT(6))
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_STOP_M  (BIT(6))
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TEST_STOP_S  6
+/* AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_STOP : R/W ;bitpos:[5] ;default: 1'd0 ; */
+/*description: Stop Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_STOP    (BIT(5))
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_STOP_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TEST_STOP_S  5
+/* AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_STOP : R/W ;bitpos:[4] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_STOP    (BIT(4))
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_STOP_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TEST_STOP_S  4
+/* AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_STOP : R/W ;bitpos:[3] ;default: 1'd0 ; */
+/*description: Stop Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_STOP    (BIT(3))
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_STOP_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TEST_STOP_S  3
+/* AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_STOP : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_STOP    (BIT(2))
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_STOP_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TEST_STOP_S  2
+/* AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_STOP : R/W ;bitpos:[1] ;default: 1'd0 ; */
+/*description: Stop Read average bandwidth test for all select agent in the same time.*/
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_STOP    (BIT(1))
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_STOP_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TEST_STOP_S  1
+/* AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_STOP : R/W ;bitpos:[0] ;default: 1'd0 ; */
+/*description: reserved.*/
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_STOP    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_STOP_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_STOP_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TEST_STOP_S  0
+
+#define AXI_PERF_MON_SEL_AG0_BANDW_TRIGGER_IN_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x520)
+/* AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[15:12] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_STOP_SEL_S  12
+/* AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[11:8] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG0_WR_BANDW_TRIGGER_EN_SEL_S  8
+/* AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[7:4] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger by soc, sel source, SW register config is o
+ne source.*/
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_STOP_SEL_S  4
+/* AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[3:0] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger enable by soc, sel source, SW register conf
+ig is one source.*/
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG0_RD_BANDW_TRIGGER_EN_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG1_BANDW_TRIGGER_IN_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x524)
+/* AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[15:12] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_STOP_SEL_S  12
+/* AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[11:8] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG1_WR_BANDW_TRIGGER_EN_SEL_S  8
+/* AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[7:4] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger by soc, sel source, SW register config is o
+ne source.*/
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_STOP_SEL_S  4
+/* AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[3:0] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger enable by soc, sel source, SW register conf
+ig is one source.*/
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG1_RD_BANDW_TRIGGER_EN_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG2_BANDW_TRIGGER_IN_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x528)
+/* AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[15:12] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_STOP_SEL_S  12
+/* AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[11:8] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG2_WR_BANDW_TRIGGER_EN_SEL_S  8
+/* AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[7:4] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger by soc, sel source, SW register config is o
+ne source.*/
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_STOP_SEL_S  4
+/* AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[3:0] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger enable by soc, sel source, SW register conf
+ig is one source.*/
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG2_RD_BANDW_TRIGGER_EN_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG3_BANDW_TRIGGER_IN_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x52C)
+/* AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[15:12] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_STOP_SEL_S  12
+/* AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[11:8] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG3_WR_BANDW_TRIGGER_EN_SEL_S  8
+/* AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[7:4] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger by soc, sel source, SW register config is o
+ne source.*/
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_STOP_SEL_S  4
+/* AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[3:0] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger enable by soc, sel source, SW register conf
+ig is one source.*/
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG3_RD_BANDW_TRIGGER_EN_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG4_BANDW_TRIGGER_IN_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x530)
+/* AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[15:12] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_STOP_SEL_S  12
+/* AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[11:8] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG4_WR_BANDW_TRIGGER_EN_SEL_S  8
+/* AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[7:4] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger by soc, sel source, SW register config is o
+ne source.*/
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_STOP_SEL_S  4
+/* AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[3:0] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger enable by soc, sel source, SW register conf
+ig is one source.*/
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG4_RD_BANDW_TRIGGER_EN_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG5_BANDW_TRIGGER_IN_SEL_REG          (DR_REG_AXI_PERF_MON_BASE + 0x534)
+/* AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[15:12] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_STOP_SEL_S  12
+/* AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[11:8] ;default: 4'd0 ; */
+/*description: Write average bandwidth test, trigger enable by soc, sel source, SW register con
+fig is one source.*/
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG5_WR_BANDW_TRIGGER_EN_SEL_S  8
+/* AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL : R/W ;bitpos:[7:4] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger by soc, sel source, SW register config is o
+ne source.*/
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL_M  ((AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL_V)<<(AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL_S))
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_STOP_SEL_S  4
+/* AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL : R/W ;bitpos:[3:0] ;default: 4'd0 ; */
+/*description: Read average bandwidth test, trigger enable by soc, sel source, SW register conf
+ig is one source.*/
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL    0x0000000F
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL_M  ((AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL_V)<<(AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL_S))
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL_V  0xF
+#define AXI_PERF_MON_SEL_AG5_RD_BANDW_TRIGGER_EN_SEL_S  0
+
+#define AXI_PERF_MON_SEL_AG0_INS_BANDW_TIME_THR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x538)
+/* AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Wirte instantaneous bandwidth test time limit, counter data num in this time uni
+t, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_WR_INS_BANDW_TIME_THR_S  16
+/* AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test time limit, counter data num in this time unit
+, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG0_RD_INS_BANDW_TIME_THR_S  0
+
+#define AXI_PERF_MON_SEL_AG1_INS_BANDW_TIME_THR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x53C)
+/* AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Wirte instantaneous bandwidth test time limit, counter data num in this time uni
+t, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_WR_INS_BANDW_TIME_THR_S  16
+/* AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test time limit, counter data num in this time unit
+, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG1_RD_INS_BANDW_TIME_THR_S  0
+
+#define AXI_PERF_MON_SEL_AG2_INS_BANDW_TIME_THR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x540)
+/* AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Wirte instantaneous bandwidth test time limit, counter data num in this time uni
+t, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_WR_INS_BANDW_TIME_THR_S  16
+/* AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test time limit, counter data num in this time unit
+, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG2_RD_INS_BANDW_TIME_THR_S  0
+
+#define AXI_PERF_MON_SEL_AG3_INS_BANDW_TIME_THR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x544)
+/* AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Wirte instantaneous bandwidth test time limit, counter data num in this time uni
+t, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_WR_INS_BANDW_TIME_THR_S  16
+/* AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test time limit, counter data num in this time unit
+, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG3_RD_INS_BANDW_TIME_THR_S  0
+
+#define AXI_PERF_MON_SEL_AG4_INS_BANDW_TIME_THR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x548)
+/* AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Wirte instantaneous bandwidth test time limit, counter data num in this time uni
+t, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_WR_INS_BANDW_TIME_THR_S  16
+/* AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test time limit, counter data num in this time unit
+, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG4_RD_INS_BANDW_TIME_THR_S  0
+
+#define AXI_PERF_MON_SEL_AG5_INS_BANDW_TIME_THR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x54C)
+/* AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR : R/W ;bitpos:[31:16] ;default: 16'd0 ; */
+/*description: Wirte instantaneous bandwidth test time limit, counter data num in this time uni
+t, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_WR_INS_BANDW_TIME_THR_S  16
+/* AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR : R/W ;bitpos:[15:0] ;default: 16'd0 ; */
+/*description: Read instantaneous bandwidth test time limit, counter data num in this time unit
+, and will fresh counter to count again.*/
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR    0x0000FFFF
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR_M  ((AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR_V)<<(AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR_S))
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR_V  0xFFFF
+#define AXI_PERF_MON_SEL_AG5_RD_INS_BANDW_TIME_THR_S  0
+
+#define AXI_PERF_MON_SEL_AG_INT_RAW_REG          (DR_REG_AXI_PERF_MON_BASE + 0x550)
+/* AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_RAW : R/WTC/SS ;bitpos:[5] ;default: 1'd0 ; */
+/*description: The raw interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_RAW    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_RAW_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_RAW_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_RAW_S  5
+/* AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_RAW : R/WTC/SS ;bitpos:[4] ;default: 1'd0 ; */
+/*description: The raw interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_RAW    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_RAW_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_RAW_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_RAW_S  4
+/* AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_RAW : R/WTC/SS ;bitpos:[3] ;default: 1'd0 ; */
+/*description: The raw interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_RAW    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_RAW_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_RAW_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_RAW_S  3
+/* AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_RAW : R/WTC/SS ;bitpos:[2] ;default: 1'd0 ; */
+/*description: The raw interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_RAW    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_RAW_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_RAW_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_RAW_S  2
+/* AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_RAW : R/WTC/SS ;bitpos:[1] ;default: 1'd0 ; */
+/*description: The raw interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_RAW    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_RAW_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_RAW_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_RAW_S  1
+/* AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_RAW : R/WTC/SS ;bitpos:[0] ;default: 1'd0 ; */
+/*description: The raw interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_RAW    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_RAW_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_RAW_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_RAW_S  0
+
+#define AXI_PERF_MON_SEL_AG_INT_ST_REG          (DR_REG_AXI_PERF_MON_BASE + 0x554)
+/* AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ST : RO ;bitpos:[5] ;default: 1'd0 ; */
+/*description: The masked interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ST    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ST_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ST_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ST_S  5
+/* AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ST : RO ;bitpos:[4] ;default: 1'd0 ; */
+/*description: The masked interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ST    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ST_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ST_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ST_S  4
+/* AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ST : RO ;bitpos:[3] ;default: 1'd0 ; */
+/*description: The masked interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ST    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ST_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ST_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ST_S  3
+/* AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ST : RO ;bitpos:[2] ;default: 1'd0 ; */
+/*description: The masked interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ST    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ST_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ST_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ST_S  2
+/* AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ST : RO ;bitpos:[1] ;default: 1'd0 ; */
+/*description: The masked interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ST    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ST_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ST_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ST_S  1
+/* AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ST : RO ;bitpos:[0] ;default: 1'd0 ; */
+/*description: The masked interrupt status of instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ST    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ST_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ST_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ST_S  0
+
+#define AXI_PERF_MON_SEL_AG_INT_ENA_REG          (DR_REG_AXI_PERF_MON_BASE + 0x558)
+/* AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ENA : R/W ;bitpos:[5] ;default: 1'd0 ; */
+/*description: Write 1 to enable instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ENA    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ENA_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ENA_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_ENA_S  5
+/* AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ENA : R/W ;bitpos:[4] ;default: 1'd0 ; */
+/*description: Write 1 to enable instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ENA    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ENA_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ENA_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_ENA_S  4
+/* AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ENA : R/W ;bitpos:[3] ;default: 1'd0 ; */
+/*description: Write 1 to enable instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ENA    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ENA_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ENA_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_ENA_S  3
+/* AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ENA : R/W ;bitpos:[2] ;default: 1'd0 ; */
+/*description: Write 1 to enable instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ENA    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ENA_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ENA_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_ENA_S  2
+/* AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ENA : R/W ;bitpos:[1] ;default: 1'd0 ; */
+/*description: Write 1 to enable instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ENA    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ENA_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ENA_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_ENA_S  1
+/* AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ENA : R/W ;bitpos:[0] ;default: 1'd0 ; */
+/*description: Write 1 to enable instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ENA    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ENA_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ENA_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_ENA_S  0
+
+#define AXI_PERF_MON_SEL_AG_INT_CLR_REG          (DR_REG_AXI_PERF_MON_BASE + 0x55C)
+/* AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_CLR : WT ;bitpos:[5] ;default: 1'd0 ; */
+/*description: Write 1 to clear instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_CLR    (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_CLR_M  (BIT(5))
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG5_RECORD_CNT_UNDER_LIMIT_INT_CLR_S  5
+/* AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_CLR : WT ;bitpos:[4] ;default: 1'd0 ; */
+/*description: Write 1 to clear instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_CLR    (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_CLR_M  (BIT(4))
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG4_RECORD_CNT_UNDER_LIMIT_INT_CLR_S  4
+/* AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_CLR : WT ;bitpos:[3] ;default: 1'd0 ; */
+/*description: Write 1 to clear instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_CLR    (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_CLR_M  (BIT(3))
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG3_RECORD_CNT_UNDER_LIMIT_INT_CLR_S  3
+/* AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_CLR : WT ;bitpos:[2] ;default: 1'd0 ; */
+/*description: Write 1 to clear instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_CLR    (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_CLR_M  (BIT(2))
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG2_RECORD_CNT_UNDER_LIMIT_INT_CLR_S  2
+/* AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_CLR : WT ;bitpos:[1] ;default: 1'd0 ; */
+/*description: Write 1 to clear instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_CLR    (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_CLR_M  (BIT(1))
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG1_RECORD_CNT_UNDER_LIMIT_INT_CLR_S  1
+/* AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_CLR : WT ;bitpos:[0] ;default: 1'd0 ; */
+/*description: Write 1 to clear instantaneous bandwidth test data under limit int.*/
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_CLR    (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_CLR_M  (BIT(0))
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_CLR_V  0x1
+#define AXI_PERF_MON_SEL_AG0_RECORD_CNT_UNDER_LIMIT_INT_CLR_S  0
+
+
+#ifdef __cplusplus
+}
+#endif
+
+
+
+#endif /*_SOC_AXI_PERF_MON_REG_H_ */
