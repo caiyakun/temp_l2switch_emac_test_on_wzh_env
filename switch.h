@@ -13,7 +13,7 @@ extern "C" {
 
 
 #define SWITCH_VERSION                     20 // 2.0
-#define PCB_NOT_REWORK_SMI_1_TO_4           1 //0: the 4 pairs of mdio are not short on the PCB ; 1: the 4 pairs of mdio are short on the PCB
+#define PCB_NOT_REWORK_SMI_1_TO_4           1 //1: the 4 pairs of mdio are not short on the PCB ; 0: the 4 pairs of mdio are short on the PCB
 
 #define SWITCH_DR_REG_EIB_BLOCK_BASE       0x09100000
 
